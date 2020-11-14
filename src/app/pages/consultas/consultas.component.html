@@ -1,0 +1,27 @@
+<h3>{{title}}</h3>
+<hr>
+<table class="table table-sm table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Consultorio <br>Número</th>
+        <th scope="col">Paciente</th>
+        <th scope="col">Médico</th>
+        <th scope="col">Especialidad</th>
+        <th scope="col">Diagnóstico</th>
+        <th scope="col">Fecha</th>
+
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reg of consultas">
+        <th scope="row">{{reg.numConsultorio}}</th>
+        <td>{{reg.paciente.nombres}} {{reg.paciente.apellidos}}</td>
+        <td>{{reg.medico.nombres}} {{reg.medico.apellidos}}</td>
+        <td>{{reg.especialidad.nombre}}</td>
+        <td>{{reg.detalleConsulta[0].diagnostico}}</td>
+        <td>{{reg.fecha}}</td>
+
+    </tr>
+
+    </tbody>
+  </table>
