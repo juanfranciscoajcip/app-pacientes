@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ConsultaService } from './../../services/consultas.service';
 
 @Component({
@@ -13,15 +14,21 @@ export class ConsultasComponent {
   public consultas: Array<any> = []
 
   // Inyectar servicio con el método constructor
-  constructor(private consultaService:ConsultaService){
+  constructor(private consultaService:ConsultaService, private router:Router){
 
     // Funcion de tipo flech => 
     this.consultaService.getConsultas().subscribe((resp: any) => {
       console.log(resp);
       this.consultas = resp
-    })
+    })    
+  }
 
-
+  // Funciones para botones
+  Listar(){
+    this.router.navigate(["consultas"]);
+  }
+  Registrar(){
+    this.router.navigate(["registrar"]);
   }
   
 

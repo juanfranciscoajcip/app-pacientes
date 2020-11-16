@@ -1,27 +1,41 @@
-<h3>{{title}}</h3>
-<hr>
-<table class="table table-sm table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Consultorio <br>Número</th>
-        <th scope="col">Paciente</th>
-        <th scope="col">Médico</th>
-        <th scope="col">Especialidad</th>
-        <th scope="col">Diagnóstico</th>
-        <th scope="col">Fecha</th>
+<div class="container">
+	<div class="card">
+    <h3>{{title}}</h3>
+  </div>
+	<div class="card-body">
+    <div class="container">
+      <button (click)="Listar()" class="btn btn-info">Listar </button>
+      <button (click)="Registrar()" class="btn btn-info" style="margin-left:10px">Registrar</button>
+    </div>
+    <hr>
+    
+    <table class="table table-sm table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Consultorio <br>Número</th>
+            <th scope="col">Paciente</th>
+            <th scope="col">Médico</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Diagnóstico</th>
+            <th scope="col">Fecha</th>
+    
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reg of consultas">
+            <th scope="row">{{reg.numConsultorio}}</th>
+            <td>{{reg.paciente.nombres}} {{reg.paciente.apellidos}}</td>
+            <td>{{reg.medico.nombres}} {{reg.medico.apellidos}}</td>
+            <td>{{reg.especialidad.nombre}}</td>
+            <td>{{reg.detalleConsulta[0].diagnostico}}</td>
+            <td>{{reg.fecha}}</td>
+    
+        </tr>
+    
+        </tbody>
+      </table>
 
-    </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let reg of consultas">
-        <th scope="row">{{reg.numConsultorio}}</th>
-        <td>{{reg.paciente.nombres}} {{reg.paciente.apellidos}}</td>
-        <td>{{reg.medico.nombres}} {{reg.medico.apellidos}}</td>
-        <td>{{reg.especialidad.nombre}}</td>
-        <td>{{reg.detalleConsulta[0].diagnostico}}</td>
-        <td>{{reg.fecha}}</td>
+  </div>
+</div>
 
-    </tr>
 
-    </tbody>
-  </table>

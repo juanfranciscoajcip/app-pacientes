@@ -16,6 +16,7 @@ import { ConsultasComponent } from './pages/consultas/consultas.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RegistrarComponent } from './pages/consultas/registrar/registrar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     PacientesComponent,
     ConsultasComponent,
     Page404Component,
-    NavbarComponent
+    NavbarComponent,
+    RegistrarComponent
     
   ],
   imports: [
