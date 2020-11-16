@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 //- Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -17,6 +18,7 @@ import { Page404Component } from './pages/page404/page404.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegistrarComponent } from './pages/consultas/registrar/registrar.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { RegistrarComponent } from './pages/consultas/registrar/registrar.compon
     ConsultasComponent,
     Page404Component,
     NavbarComponent,
-    RegistrarComponent
+    RegistrarComponent,
+    InicioComponent
     
   ],
   imports: [
@@ -35,7 +38,8 @@ import { RegistrarComponent } from './pages/consultas/registrar/registrar.compon
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
 
   ],
   providers: [],

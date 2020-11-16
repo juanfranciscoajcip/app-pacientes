@@ -1,35 +1,38 @@
-<div class="container col-md-6">
+<div class="container col-md-4">
 	<div class="card">
-        <h3>Registrar Consulta</h3>
-    </div>
 	<div class="card-body">
         <form>
             <div class="form-group">
-                <label for="">Numero:</label>
-                <input type="text" class="form-control">
+                <label for="">Nombres:</label>
+                <input type="text" name="nombres"  [(ngModel)]= "reg.nombres" class="form-control">
             </div>
             <div class="form-group">
-                <label for="">Fecha:</label>
-                <input type="date" class="form-control">
+                <label for="">Apellidos:</label>
+                <input type="text" name="apellidos"[(ngModel)]= "reg.apellidos" class="form-control">
             </div>
             <div class="form-group">
-                <label for="">Paciente:</label>
-                <input type="search" class="form-control">
+                <label for="">DNI:</label>
+                <input type="text" name="dni"  [(ngModel)]= "reg.dni" class="form-control">
             </div>
             <div class="form-group">
-                <label for="">Medico:</label>
-                <input type="text" class="form-control">
+                <label for="">Direccion:</label>
+                <input type="text" name="direccion" [(ngModel)]= "reg.direccion" class="form-control">
             </div>
             <div class="form-group">
-                <label for="">Especialidad:</label>
-                <input type="text" class="form-control">
+                <label for="">Telefono:</label>
+                <input type="text" name="telefono" [(ngModel)]= "reg.telefono" class="form-control">
             </div>
-            <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+            <button class="btn btn-danger" (click)="Guardar()">Guardar</button>
         </form>
-  
-
-
-  </div>
+    </div>
+    </div>
 </div>
 
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <h3>{{reg.nombres}} {{reg.apellidos}}</h3>
+        <p>{{reg.direccion}}</p>
+        <p>{{reg.telefono}}</p>
+    </div>
+</div>
 

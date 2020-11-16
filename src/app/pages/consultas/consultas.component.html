@@ -1,14 +1,10 @@
-<div class="container">
-	<div class="card">
-    <h3>{{title}}</h3>
-  </div>
-	<div class="card-body">
-    <div class="container">
-      <button (click)="Listar()" class="btn btn-info">Listar </button>
-      <button (click)="Registrar()" class="btn btn-info" style="margin-left:10px">Registrar</button>
-    </div>
-    <hr>
-    
+<mat-toolbar>
+  <span><mat-icon>done</mat-icon>{{title}}</span>
+  <div class="spacer"></div>
+  <button mat-raised-button (click)="Registrar()" style="margin-left:10px">Registrar</button>
+</mat-toolbar>
+
+	<div class="card-body">   
     <table class="table table-sm table-hover">
         <thead>
           <tr>
@@ -36,6 +32,5 @@
       </table>
 
   </div>
-</div>
 
 
