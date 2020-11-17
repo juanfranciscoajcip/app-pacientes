@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { JsonService } from './../../json.service';
 import { PacientesService } from './../../services/pacientes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'pacientes',
@@ -21,13 +22,22 @@ export class PacientesComponent {
   //}
 
   // Inyectar servicio con el método constructor
-  constructor(private pacientesService:PacientesService){
-
-    // Funcion de tipo flech => 
-    this.pacientesService.getPacientes().subscribe((resp: any) => {
-      console.log(resp);
-      this.pacientes = resp
-    })
+  constructor(private pacientesService:PacientesService, private router:Router){
+    this.getPacientes();
   }
+
+  getPacientes(){
+       // Funcion de tipo flech => 
+       this.pacientesService.getPacientes().subscribe((resp: any) => {
+        console.log(resp);
+        this.pacientes = resp
+      }) 
+  }
+
+  editarPaciente(id: string){
+    console.log(id);
+    this.router.navigate(["form-pacientes/editar/",id]);
+ 
+  }  
     
 }

@@ -21,4 +21,12 @@ export class PacientesService {
       });
 
   }
+
+  eliminaPaciente(){
+    let header = new HttpHeaders()
+    return this.http.put(this._url, {
+      //      headers: header
+          });    
+  }
+
 }

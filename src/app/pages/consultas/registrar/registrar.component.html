@@ -1,38 +1,32 @@
 <div class="container col-md-4">
 	<div class="card">
 	<div class="card-body">
+        <h5 class="card-title">Registro de Consulta</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ingrese los datos del formulario</h6>               
         <form>
             <div class="form-group">
-                <label for="">Nombres:</label>
-                <input type="text" name="nombres"  [(ngModel)]= "reg.nombres" class="form-control">
+                <label for="">Paciente:</label>
+                <input type="text" name="paciente"  [(ngModel)]= "reg.id_paciente" class="form-control">
             </div>
             <div class="form-group">
-                <label for="">Apellidos:</label>
-                <input type="text" name="apellidos"[(ngModel)]= "reg.apellidos" class="form-control">
+                <label for="">Medico:</label>
+                <input type="text" name="medico"[(ngModel)]= "reg.id_medico" class="form-control">
             </div>
             <div class="form-group">
-                <label for="">DNI:</label>
-                <input type="text" name="dni"  [(ngModel)]= "reg.dni" class="form-control">
+                <label for="">Especialidad:</label>
+                <input type="text" name="especialidad"  [(ngModel)]= "reg.id_especialidad" class="form-control">
             </div>
             <div class="form-group">
-                <label for="">Direccion:</label>
-                <input type="text" name="direccion" [(ngModel)]= "reg.direccion" class="form-control">
+                <label for="">Consultorio:</label>
+                <input type="text" name="consultorio" [(ngModel)]= "reg.num_consultorio" class="form-control">
             </div>
             <div class="form-group">
-                <label for="">Telefono:</label>
-                <input type="text" name="telefono" [(ngModel)]= "reg.telefono" class="form-control">
+                <label for="">Fecha:</label>
+                <input type="text" name="fecha" [(ngModel)]= "reg.fecha" class="form-control">
             </div>
             <button class="btn btn-danger" (click)="Guardar()">Guardar</button>
         </form>
     </div>
-    </div>
-</div>
-
-<div class="col-md-4">
-    <div class="card card-body text-center">
-        <h3>{{reg.nombres}} {{reg.apellidos}}</h3>
-        <p>{{reg.direccion}}</p>
-        <p>{{reg.telefono}}</p>
     </div>
 </div>
 

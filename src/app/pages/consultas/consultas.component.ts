@@ -16,11 +16,15 @@ export class ConsultasComponent {
   // Inyectar servicio con el método constructor
   constructor(private consultaService:ConsultaService, private router:Router){
 
+   this.getConsultas();
+  }
+
+  getConsultas(){
     // Funcion de tipo flech => 
     this.consultaService.getConsultas().subscribe((resp: any) => {
       console.log(resp);
       this.consultas = resp
-    })    
+    }) 
   }
 
   // Funciones para botones
@@ -29,6 +33,9 @@ export class ConsultasComponent {
   }
   Registrar(){
     this.router.navigate(["registrar"]);
+  }
+  RegistrarPaciente(){
+    this.router.navigate(["form-pacientes"]);
   }
   
 

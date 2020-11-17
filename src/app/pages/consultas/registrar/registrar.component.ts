@@ -1,7 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router } from '@angular/router';
 import { Consulta } from 'src/app/modelo/consulta';
-import { Paciente } from 'src/app/modelo/paciente';
 import { ConsultaService } from 'src/app/services/consultas.service';
 
 @Component({
@@ -13,13 +12,17 @@ export class RegistrarComponent implements OnInit {
 
   @HostBinding('class') classes = "row";
 
-  reg: Paciente = {
-    idPaciente: 0,
-    nombres: '',
-    apellidos: '',
-    dni: '',
-    direccion: '',
-    telefono: ''
+  reg: Consulta = {
+    idConsulta: 0,
+    id_paciente: 0,
+    id_medico: 0,
+    id_especialidad: 0,
+    num_consultorio: '',
+    fecha: '2020-11-16',
+    detalleConsulta: [{
+      diagnostico: '',
+      tratamiento: '',
+  }]
   }
 
   constructor(private router:Router, private service:ConsultaService) {}
@@ -34,7 +37,7 @@ export class RegistrarComponent implements OnInit {
     //Eliminar propiades que no requiere el servicio al guardar
     //delete this.reg.idPaciente;
 
-    this.service.registrarPaciente(this.reg)
+    this.service.registrarConsulta(this.reg)
     .subscribe(data=>{   
               console.log("Respuesta:");
               console.log(data);      

@@ -7,6 +7,7 @@
         <th scope="col">Nombres</th>
         <th scope="col">Apellidos</th>
         <th scope="col">DNI</th>
+        <th scope="col">Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
         <td>{{paciente.nombres}}</td>
         <td>{{paciente.apellidos}}</td>
         <td>{{paciente.dni}}</td>
+        <td><a class="btn btn-info" (click)="editarPaciente(paciente.idPaciente)">Editar</a></td>
       </tr>
 
     </tbody>

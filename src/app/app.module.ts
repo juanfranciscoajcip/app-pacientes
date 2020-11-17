@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegistrarComponent } from './pages/consultas/registrar/registrar.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { FormPacientesComponent } from './pages/pacientes/form-pacientes/form-pacientes.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     Page404Component,
     NavbarComponent,
     RegistrarComponent,
-    InicioComponent
+    InicioComponent,
+    FormPacientesComponent
     
   ],
   imports: [
