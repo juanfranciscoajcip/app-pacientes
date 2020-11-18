@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 
 export class RegistroPacienteComponent implements OnInit {
   public pacientes:Array<any> = [];
-  nuevoPaciente: Paciente  = { idPaciente: 20, nombres: '', apellidos: '',  dni: '', direccion: '', correo: '', telefono: ''}
+  nuevoPaciente: Paciente  = { idPaciente: 21, nombres: '', apellidos: '',  dni: '', direccion: '', correo: '', telefono: ''}
   
   constructor(private router:Router, private pacienteService: PacientesService) { }
 
