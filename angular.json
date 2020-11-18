@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-pacientes"
+    }
+  },
+  "defaultProject": "app-pacientes",
+  "cli": {
+    "analytics": "af57f50c-c7bb-4ada-89f9-ade29f06ed22"
+  }
 }
