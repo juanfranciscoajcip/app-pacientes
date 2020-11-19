@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EspecialidadService } from './../../services/especialidad.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-especialidad',

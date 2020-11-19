@@ -22,8 +22,8 @@ import { FormPacientesComponent } from './pages/pacientes/form-pacientes/form-pa
 
 
 const routes: Routes = [
-//  { path:'', component: InicioComponent},  
-  {path: '', component: AppComponent, pathMatch: 'full'},
+  { path:'', component: LoginComponent},  
+//  {path: '', component: AppComponent, pathMatch: 'full'},
   {path: 'medico', component: MedicosComponent},
   {path: 'login', component: LoginComponent},
   {path: 'paciente', component: PacienteComponent},

@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 
 //- Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -54,8 +53,7 @@ import { FormPacientesComponent } from './pages/pacientes/form-pacientes/form-pa
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule,
-    CommonModule
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
