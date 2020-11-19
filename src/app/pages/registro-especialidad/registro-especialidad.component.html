@@ -15,7 +15,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="firstName">Nombre</label>
-                        <input type="text" ([ngModel])="nuevaEspecialidad.nombre" class="form-control" name = "nombre" id="firstName">
+                        <input type="text" [(ngModel)]="nuevaEspecialidad.nombre" class="form-control" name = "nombre" id="firstName">
                     </div>      
                 </div>
                 <button (click)="registrarEspecialidad()" type="submit" class="btn btn-primary">Guardar</button>
