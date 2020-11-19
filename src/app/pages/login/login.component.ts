@@ -30,8 +30,10 @@ export class LoginComponent implements OnInit {
     .subscribe(
       x => {
         console.log('user: '+JSON.stringify(x));
+        /*
         var us = x.json();
         console.log('pass: '+us.clave);
+        */
         
         this._router.navigate(['pacientes']);
       }
