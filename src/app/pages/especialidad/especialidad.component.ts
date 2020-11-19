@@ -18,7 +18,7 @@ export class EspecialidadComponent{
   obtenerEspecialidades(){
     this.especialidadService.getEspecialidades().subscribe((resp: any)=>{
       console.log("Respuesta obtenerEspecialidades:");
-      console.log(resp)
+      console.log(resp);
       this.especialidades = resp;
     }, 
       error => {

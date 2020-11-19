@@ -24,22 +24,22 @@ import { FormPacientesComponent } from './pages/pacientes/form-pacientes/form-pa
 const routes: Routes = [
   { path:'', component: LoginComponent},  
 //  {path: '', component: AppComponent, pathMatch: 'full'},
-  {path: 'medico', component: MedicosComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'paciente', component: PacienteComponent},
-  {path: 'pacientes', component: PacientesComponent},
-  {​​path: 'especialidades', component: EspecialidadComponent}​​,
-  {​​path: 'registroEspecialidad', component: RegistroEspecialidadComponent}​​,
-  {​​path: 'registroPaciente', component: RegistroPacienteComponent},  
-  {path: 'insertar-medico', component: InsertarMedicoComponent},
-  {path: 'examenes', component: ExamenesComponent},
-  {path: 'insertar-examen', component: InsertarExamenComponent},
-  { path:'pacientes', component: PacientesComponent},
-  { path:'consultas', component: ConsultasComponent},
-  { path:'registrar', component: RegistrarComponent},
-  { path:'form-pacientes', component: FormPacientesComponent},
-  { path:'form-pacientes/editar/:id', component: FormPacientesComponent},
-  { path:'**', component: Page404Component}
+  { path: 'medico', component: MedicosComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'paciente', component: PacienteComponent},
+  { path: 'pacientes', component: PacientesComponent},
+  { ​​path: 'especialidades', component: EspecialidadComponent}​​,
+  { ​​path: 'registroEspecialidad', component: RegistroEspecialidadComponent}​​,
+  { ​​path: 'registroPaciente', component: RegistroPacienteComponent},  
+  { path: 'insertar-medico', component: InsertarMedicoComponent},
+  { path: 'examenes', component: ExamenesComponent},
+  { path: 'insertar-examen', component: InsertarExamenComponent},
+  { path: 'pacientes', component: PacientesComponent},
+  { path: 'consultas', component: ConsultasComponent},
+  { path: 'registrar', component: RegistrarComponent},
+  { path: 'form-pacientes', component: FormPacientesComponent},
+  { path: 'form-pacientes/editar/:id', component: FormPacientesComponent},
+  { path: '**', component: Page404Component}
 ];
 
 @NgModule({
