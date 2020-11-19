@@ -2,7 +2,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Consulta } from '../modelo/consulta';
-import { Paciente } from '../modelo/paciente';
+import { Pacientes } from '../modelo/pacientes';
 
 @Injectable({
   providedIn: 'root'
@@ -37,14 +37,14 @@ export class ConsultaService {
 
   }
 
-  registrarPaciente(paciente:Paciente){
+  registrarPaciente(paciente:Pacientes){
     console.log('Registrando paciente');
-    return this.http.post<Paciente>(this._urlp,paciente);
+    return this.http.post<Pacientes>(this._urlp,paciente);
   }
 
-  actualizarPaciente(id:string, paciente:Paciente){
+  actualizarPaciente(id:string, paciente:Pacientes){
     console.log('Actualizadno paciente');
-    return this.http.post<Paciente>(this._urlp,paciente);
+    return this.http.post<Pacientes>(this._urlp,paciente);
   }
 
 

@@ -44,7 +44,6 @@ import { FormPacientesComponent } from './pages/pacientes/form-pacientes/form-pa
     RegistrarComponent,
     InicioComponent,
     FormPacientesComponent
-    
   ],
   imports: [
     BrowserModule,
@@ -56,7 +55,6 @@ import { FormPacientesComponent } from './pages/pacientes/form-pacientes/form-pa
     MatButtonModule,
     MatIconModule,
     FormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

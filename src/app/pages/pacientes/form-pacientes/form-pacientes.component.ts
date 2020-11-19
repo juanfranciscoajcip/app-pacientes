@@ -1,6 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Paciente } from 'src/app/modelo/paciente';
+import { Pacientes } from 'src/app/modelo/pacientes';
 import { ConsultaService } from 'src/app/services/consultas.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class FormPacientesComponent implements OnInit {
   
   @HostBinding('class') classes = "row";
 
-  reg: Paciente = {
+  reg: Pacientes = {
     idPaciente: '',
     nombres: '',
     apellidos: '',
