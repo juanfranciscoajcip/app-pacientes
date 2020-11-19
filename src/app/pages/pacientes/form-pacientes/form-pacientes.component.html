@@ -1,0 +1,45 @@
+<div class="container col-md-4">
+    <div class="card">
+	<div class="card-body">
+        <h5 class="card-title">Paciente</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Ingrese los datos del formulario</h6>        
+        <form>
+            <div class="form-group">
+                <label for="">Nombres:</label>
+                <input type="text" name="nombres"  [(ngModel)]= "reg.nombres" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Apellidos:</label>
+                <input type="text" name="apellidos"[(ngModel)]= "reg.apellidos" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">DNI:</label>
+                <input type="text" name="dni"  [(ngModel)]= "reg.dni" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Direccion:</label>
+                <input type="text" name="direccion" [(ngModel)]= "reg.direccion" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Telefono:</label>
+                <input type="text" name="telefono" [(ngModel)]= "reg.telefono" class="form-control">
+            </div>
+            <button class="btn btn-danger" (click)="edit == true? actualizarPaciente() : Guardar()">Guardar</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <h3>{{reg.nombres}} {{reg.apellidos}}</h3>
+        <p>{{reg.direccion}}</p>
+        <p>{{reg.telefono}}</p>
+        <!-- 
+            <img [src]="reg.image = '' ? '/assets/noimage.png' : reg.image" class="card-img-top">
+            <p>{{reg.fecha} | date: 'yyyy-MM-dd'}}</p>
+        -->
+    </div>
+</div>
+
+

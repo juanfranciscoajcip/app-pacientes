@@ -31,5 +31,12 @@ export class PacientesService {
   eliminarPaciente(identificador){
     return this.http.delete(this._url + "/" + identificador);
   }
-  
+
+  eliminaPaciente(){
+    let header = new HttpHeaders()
+    return this.http.put(this._url, {
+      //      headers: header
+          });    
+  }
+
 }

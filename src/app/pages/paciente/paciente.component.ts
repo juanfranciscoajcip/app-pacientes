@@ -17,9 +17,11 @@ export class PacienteComponent{
 
   obtenerPacientes(){
     this.pacienteService.getPacientes().subscribe((resp: any)=>{
+      console.log("Respuesta obtenerPacinetes:");
       this.pacientes = resp;
     },
       error => {
+        console.log("Error obtenerPacientes:");
         console.log(JSON.stringify(error));
       });
   }

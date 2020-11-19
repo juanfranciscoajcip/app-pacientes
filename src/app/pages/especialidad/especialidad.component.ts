@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EspecialidadService } from './../../services/especialidad.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-especialidad',
@@ -16,10 +17,12 @@ export class EspecialidadComponent{
 
   obtenerEspecialidades(){
     this.especialidadService.getEspecialidades().subscribe((resp: any)=>{
-      console.log(resp)
+      console.log("Respuesta obtenerEspecialidades:");
+      console.log(resp);
       this.especialidades = resp;
     }, 
       error => {
+        console.log("Error obtenerEspecialidades:");
         console.log(JSON.stringify(error));
     });
   }

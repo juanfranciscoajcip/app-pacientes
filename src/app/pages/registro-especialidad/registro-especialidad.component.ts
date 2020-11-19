@@ -17,7 +17,7 @@ export class RegistroEspecialidadComponent implements OnInit {
 
   obtenerEspecialidades(){
     this.especialidadService.getEspecialidades().subscribe((resp: any)=>{
-      console.log(resp)
+      console.log(resp);
       this.especialidades = resp;
     }, 
       error => {
@@ -26,7 +26,8 @@ export class RegistroEspecialidadComponent implements OnInit {
   }
 
   registrarEspecialidad(){
-    console.log('evento agregar');
+    console.log('evento agregar especialidad:');
+    console.log(this.nuevaEspecialidad);
     this.especialidadService.registrarEspecialidad(this.nuevaEspecialidad).subscribe(resp =>{
       this.obtenerEspecialidades();
     }, error => {
