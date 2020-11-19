@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { JsonService } from './json.service';
+import { PacientesService } from './services/pacientes.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app-pacientes';
- 
+  constructor(){
+
+  }
+    
 }
