@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { JsonService } from './json.service';
-import { PacientesService } from './services/pacientes.service';
+import { PacientesService } from './services/pacientes.service'
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { PacientesService } from './services/pacientes.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app-pacientes';
+  title = 'app-Josue';
 
   //Declaracion de variables
   public pacientes: Array<any> = []

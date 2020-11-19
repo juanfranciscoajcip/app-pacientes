@@ -1,0 +1,24 @@
+<p>medicos works!</p>
+
+<h1>medicos</h1>
+<button routerLink="/insertar-medico">Agregar</button>
+
+<table class="table table-sm table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">CMP</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medico of m">
+            <th scope="row">{{medico.idMedico}}</th>
+            <td>{{medico.nombres}}</td>
+            <td>{{medico.apellidos}}</td>
+            <td>{{medico.cmp}}</td>
+        </tr>
+
+    </tbody>
+</table>

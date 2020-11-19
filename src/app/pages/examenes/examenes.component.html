@@ -1,0 +1,22 @@
+<p>examenes works!</p>
+<h1>Examenes</h1>
+<button routerLink="/insertar-examen">Agregar</button>
+
+<table class="table table-sm table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Descripcion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let examen of e">
+            <th scope="row">{{examen.idExamen}}</th>
+            <td>{{examen.nombre}}</td>
+            <td>{{examen.descripcion}}</td>
+
+        </tr>
+
+    </tbody>
+</table>

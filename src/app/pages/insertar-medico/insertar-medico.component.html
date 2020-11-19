@@ -1,0 +1,21 @@
+<h1>Inserte el Medico Deseado</h1>
+<form [formGroup]="profileForm">
+
+    <label>
+    Nombre del Medico:
+    <input type="text" formControlName="name">
+  </label>
+
+    <label>
+    Apellido del Medico:
+    <input type="text" formControlName="lastname">
+  </label>
+
+    <label>
+    CMP del Medico:
+    <input type="text" formControlName="cmp">
+  </label>
+
+    <button (click)="oninsert()">Agregar</button>
+</form>
+<button routerLink="/medico">Regresar</button>

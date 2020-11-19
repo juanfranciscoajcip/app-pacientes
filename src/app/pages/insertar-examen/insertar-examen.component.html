@@ -1,0 +1,17 @@
+<p>insertar-examen works!</p>
+<h1>Ingrese la Información del Examen</h1>
+<form [formGroup]="profileForm">
+
+    <label>
+    Nombre del Examen:
+    <input type="text" formControlName="name">
+  </label>
+
+    <label>
+    Descripcion del Examen:
+    <input type="text" formControlName="description">
+  </label>
+
+    <button (click)="oninsert()">Agregar</button>
+</form>
+<button routerLink="/examenes">Regresar</button>
