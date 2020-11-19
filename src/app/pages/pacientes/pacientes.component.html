@@ -1,0 +1,32 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Pacientes</h1>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-sm table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">DNI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let paciente of pacientes">
+                    <th scope="row">{{paciente.idPaciente}}</th>
+                    <td>{{paciente.nombres}}</td>
+                    <td>{{paciente.apellidos}}</td>
+                    <td>{{paciente.dni}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+
+
