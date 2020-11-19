@@ -16,10 +16,12 @@ export class EspecialidadComponent{
 
   obtenerEspecialidades(){
     this.especialidadService.getEspecialidades().subscribe((resp: any)=>{
+      console.log("Respuesta obtenerEspecialidades:");
       console.log(resp)
       this.especialidades = resp;
     }, 
       error => {
+        console.log("Error obtenerEspecialidades:");
         console.log(JSON.stringify(error));
     });
   }
