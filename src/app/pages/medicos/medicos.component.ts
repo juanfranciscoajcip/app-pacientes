@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MedicoService } from 'src/app/services/medicos.service';
+import { MedicoService } from 'src/app/services/medico.service';
 
 @Component({
   selector: 'app-medicos',
@@ -9,15 +9,18 @@ import { MedicoService } from 'src/app/services/medicos.service';
 export class MedicosComponent implements OnInit {
 
   public m: Array<any> = []
-
-  constructor(private ms: MedicoService) { 
-    this.ms.getMedicos().subscribe((resp: any) => {
-      console.log(resp);
-      this.m = resp
-    })
+  
+  constructor(private ms: MedicoService) {
+  
+      // Funcion de tipo flech => 
+      this.ms.getMedico().subscribe((resp: any) => {
+        console.log(resp);
+        this.m = resp
+      })
+    }
+  
+    ngOnInit(): void {
+    }
+  
   }
-
-  ngOnInit(): void {
-  }
-
-}
+  
