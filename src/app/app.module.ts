@@ -11,12 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MedicosComponent } from './pages/medicos/medicos.component';
 import { LoginComponent } from './pages/login/login.component';
-//import { PacientesComponent } from './pages/pacientes/pacientes.component';
 import { InsertarMedicoComponent } from './pages/insertar-medico/insertar-medico.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExamenesComponent } from './pages/examenes/examenes.component';
 import { InsertarExamenComponent } from './pages/insertar-examen/insertar-examen.component';
-
 
 //- Componentes
 import { AppComponent } from './app.component';
@@ -47,14 +45,14 @@ import { FormPacientesComponent } from './pages/pacientes/form-pacientes/form-pa
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule,
-    FormsModule
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
