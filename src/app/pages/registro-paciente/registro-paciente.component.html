@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="display-4">Nuevo paciente</h2>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName">Nombres</label>
+                        <input type="text" [(ngModel)]="nuevoPaciente.nombres" class="form-control" name = "nombres" id="firstName">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastName">Apellidos</label>
+                        <input type="text" [(ngModel)]="nuevoPaciente.apellidos" class="form-control" name = "apellidos" id="lastName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Dirección</label>
+                    <input type="text" [(ngModel)]="nuevoPaciente.direccion" class="form-control" name = "direccion" id="inputAddress" placeholder="7 Av 5-28 zona 4">
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail4">Email</label>
+                    <input type="text" [(ngModel)]="nuevoPaciente.correo" class="form-control" name = "correo" id="inputEmail4">
+                </div> 
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputTel">Teléfono</label>
+                        <input type="text" [(ngModel)]="nuevoPaciente.telefono" class="form-control" name = "telefono" id="inputTel">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputDni">DNI</label>
+                        <input type="text" [(ngModel)]="nuevoPaciente.dni" class="form-control" name="dni" id="inputDni">
+                    </div>
+                </div>
+                <button (click)="registrarPaciente()" type="submit" class="btn btn-primary">Guardar</button>
+              </form>
+        </div>
+    </div>
+</div>
