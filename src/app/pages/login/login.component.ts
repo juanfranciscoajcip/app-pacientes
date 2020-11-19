@@ -29,17 +29,29 @@ export class LoginComponent implements OnInit {
     this.ls.getUsuario(this.loginform.controls['user'].value)
     .subscribe(
       x => {
-        console.log('user: '+JSON.stringify(x));
-        /*
-        var us = x.json();
-        console.log('pass: '+us.clave);
-        */
-        
-        this._router.navigate(['pacientes']);
+        const jsonValue = JSON.stringify(x);
+        var valueFromJson = JSON.parse(jsonValue);
+        const cl = (valueFromJson || {}).password;
+
+        if(this.loginform.controls['password'].value == cl){
+          console.log('Bienvenido');
+          alert('Bienvenido');
+          this._router.navigate(['pacientes']);
+        } else {
+          console.log('El usuario o contraseña no son correctos.');
+          alert('El usuario o contraseña no son correctos.');
+        }
+
       }
       ,
-      err => console.error('Observer got an error: ' + err),
-      () => console.log('Observer got a complete notification')
+      err =>{
+        console.error('Observer got an error: ' + err);
+        alert('NO existe ese usuario');
+      }, 
+      () => {
+        console.log('Observer got a complete notification');
+        //alert('NO existe ese usuario');
+      }
     )
   }
 
